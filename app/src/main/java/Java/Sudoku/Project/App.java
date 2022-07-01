@@ -4,21 +4,48 @@
 package Java.Sudoku.Project;
 import javafx.application.Application;
 import javafx.scene.*;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class App extends Application{
+
+    Rectangle box_ur;
+    Rectangle box_ul;
+    Rectangle box_mm;
+    Rectangle box_lr;
+    Rectangle box_ll;
+
     public Parent createScreen() {
         return new StackPane(new Text("Sudoku"));
     }
-    public static Stage parentWindow;
+    public Parent createContent() {//creates box in the upper right corner and other areas
+        Rectangle box_ur = new Rectangle(300, 300, Color.GREY);
+        Rectangle box_ul = new Rectangle(300, 300, Color.GREY);
+        Rectangle box_mm = new Rectangle(300, 300, Color.GREY);
+        Rectangle box_lr = new Rectangle(300, 300, Color.GREY);
+        Rectangle box_ll = new Rectangle(300, 300, Color.GREY);
+
+        box_ul.setTranslateX(600);
+        box_mm.setTranslateX(300);
+        box_mm.setTranslateY(300);
+        box_lr.setTranslateY(600);
+        box_ll.setTranslateX(600);
+        box_ll.setTranslateY(600);
+
+        return new Pane(box_ur, box_ul, box_mm, box_ll, box_ll);
+    }
+
+
+    public static Stage stage;
     @Override
     public void start(Stage stage) throws Exception {
         // TODO Auto-generated method stub
-        parentWindow = stage;
-        parentWindow.setScene(new Scene(createScreen(), 300, 300));
-        parentWindow.show();
+        stage.setScene(new Scene(createContent(), 900, 900, Color.WHITE));
+        stage.show();
     }
 
     public static void main(String[] args) {
