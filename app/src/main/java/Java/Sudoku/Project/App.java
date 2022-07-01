@@ -15,6 +15,7 @@ import javafx.stage.Stage;
 
 public class App extends Application{
 
+    //initializations
     Rectangle box_ur;
     Rectangle box_ul;
     Rectangle box_mm;
@@ -22,12 +23,9 @@ public class App extends Application{
     Rectangle box_ll;
     Button button;
     public static Stage stage;
-
     Node node;
 
-    public Parent createScreen() {
-        return new StackPane(new Text("Sudoku"));
-    }
+    //creates background
     public Parent createBackground() {//creates box in the upper right corner and other areas
 
         TitledPane pane = new TitledPane();
@@ -59,6 +57,7 @@ public class App extends Application{
         return new Pane(box_ur, box_ll, box_ul, box_mm, box_lr); 
     }
 
+    //shows the game window and does stuff with the game window
     @Override
     public void start(Stage stage) throws Exception {
         // TODO Auto-generated method stub
@@ -67,6 +66,7 @@ public class App extends Application{
         stage.show();
     }
 
+    //runs the script
     public static void main(String[] args) {
         launch(args);
     }
