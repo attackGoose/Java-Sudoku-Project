@@ -19,15 +19,24 @@ public class App extends Application{
     Rectangle box_lr;
     Rectangle box_ll;
 
+    Node node;
+
     public Parent createScreen() {
         return new StackPane(new Text("Sudoku"));
     }
     public Parent createContent() {//creates box in the upper right corner and other areas
+        
         Rectangle box_ur = new Rectangle(300, 300, Color.GREY);
         Rectangle box_ul = new Rectangle(300, 300, Color.GREY);
         Rectangle box_mm = new Rectangle(300, 300, Color.GREY);
         Rectangle box_lr = new Rectangle(300, 300, Color.GREY);
         Rectangle box_ll = new Rectangle(300, 300, Color.GREY);
+
+        box_ur.getTransforms();
+        box_ul.getTransforms();
+        box_mm.getTransforms();
+        box_lr.getTransforms();
+        box_ll.getTransforms();
 
         box_ul.setTranslateX(600);
         box_mm.setTranslateX(300);
@@ -36,7 +45,8 @@ public class App extends Application{
         box_ll.setTranslateX(600);
         box_ll.setTranslateY(600);
 
-        return new Pane(box_ur, box_ul, box_mm, box_ll, box_ll);
+
+        return new Pane(box_ur, box_ll, box_ul, box_mm, box_lr);
     }
 
 
