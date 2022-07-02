@@ -3,6 +3,8 @@
  */
 package Java.Sudoku.Project;
 
+import java.net.PasswordAuthentication;
+
 import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.*;
@@ -26,62 +28,39 @@ public class App extends Application{
     Button saveButton;
     Node node;
 
-    //creates background
+    /* 
     public Parent createApplication() {
         
-        //creates the background of the sudoku window
-
-        
-    
-        Rectangle box_ur = new Rectangle(300, 300, Color.GREY);
-        Rectangle box_ul = new Rectangle(300, 300, Color.GREY);
-        Rectangle box_mm = new Rectangle(300, 300, Color.GREY);
-        Rectangle box_lr = new Rectangle(300, 300, Color.GREY);
-        Rectangle box_ll = new Rectangle(300, 300, Color.GREY);
-
-        box_ur.getTransforms();
-        box_ul.getTransforms();
-        box_mm.getTransforms();
-        box_lr.getTransforms();
-        box_ll.getTransforms();
-
-        box_ul.setTranslateX(600);
-        box_mm.setTranslateX(300);
-        box_mm.setTranslateY(300);
-        box_lr.setTranslateY(600);
-        box_ll.setTranslateX(600);
-        box_ll.setTranslateY(600);
-        
-
-        return new Pane(box_ur, box_ll, box_ul, box_mm, box_lr); 
-        
-    }
+    }*/
 
     //shows the game window and does stuff with the game window
     @Override
     public void start(Stage stage) throws Exception {
         // TODO Auto-generated method stub
+
+        //sets the background
         TilePane tilePane = new TilePane();
         tilePane.setPrefColumns(3);
         tilePane.setPrefRows(3);
         tilePane.setTileAlignment( Pos.CENTER );
 
         tilePane.getChildren().addAll(
-                new Rectangle(50, 50, Color.RED),
-                new Rectangle( 50, 50, Color.GREEN ),
-                new Rectangle( 50, 50, Color.BLUE ),
-                new Rectangle( 50, 50, Color.YELLOW ),
-                new Rectangle( 50, 50, Color.CYAN ),
-                new Rectangle( 50, 50, Color.PURPLE ),
-                new Rectangle( 50, 50, Color.BROWN ),
-                new Rectangle( 50, 50, Color.PINK ),
-                new Rectangle( 50, 50, Color.ORANGE )
+                new Rectangle( 300, 300, Color.GREY),
+                new Rectangle( 300, 300, Color.WHITE ),
+                new Rectangle( 300, 300, Color.GREY ),
+                new Rectangle( 300, 300, Color.WHITE ),
+                new Rectangle( 300, 300, Color.GREY ),
+                new Rectangle( 300, 300, Color.WHITE ),
+                new Rectangle( 300, 300, Color.GREY ),
+                new Rectangle( 300, 300, Color.WHITE ),
+                new Rectangle( 300, 300, Color.GREY )
         );
 
         Scene scene = new Scene(tilePane);
         scene.setFill(Color.LIGHTGRAY);
 
-        stage.setTitle("3x3");
+        //shows the packground
+        stage.setTitle("Sudoku");
         stage.setScene( scene );
         stage.show();
     }
