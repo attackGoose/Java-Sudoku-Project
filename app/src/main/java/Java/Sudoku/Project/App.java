@@ -30,9 +30,10 @@ public class App extends Application{
 
     /* 
     public Parent createApplication() {
-        
-    }*/
-
+        return ;
+    }
+    */ //TODO do this tr
+    
     //shows the game window and does stuff with the game window
     @Override
     public void start(Stage stage) throws Exception {
