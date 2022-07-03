@@ -3,15 +3,10 @@
  */
 package Java.Sudoku.Project;
 
-import java.net.PasswordAuthentication;
-
 import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.*;
 import javafx.scene.control.Button;
-import javafx.scene.control.TitledPane;
-import javafx.scene.layout.Pane;
-import javafx.scene.layout.StackPane;
 import javafx.scene.layout.TilePane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
@@ -32,7 +27,7 @@ public class App extends Application{
     public Parent createApplication() {
         return ;
     }
-    */ //TODO do this tr
+    */ //TODO do this tmr
     
     //shows the game window and does stuff with the game window
     @Override
