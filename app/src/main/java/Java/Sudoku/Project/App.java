@@ -20,7 +20,7 @@ public class App extends Application{
     Rectangle box_mm;
     Rectangle box_lr;
     Rectangle box_ll;
-    Button saveButton;
+    Button testButton;
     Node node;
 
     /* 
