@@ -7,6 +7,7 @@ import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.*;
 import javafx.scene.control.Button;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.TilePane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
@@ -23,16 +24,17 @@ public class App extends Application{
     Button testButton;
     Node node;
 
-    /* 
+    
     public Parent createApplication() {
-        return ;
+        Rectangle box = new Rectangle(100, 50, Color.BLUE);
+
+
+        return new Pane(box);
     }
-    */ //TODO do this tmr
     
     //shows the game window and does stuff with the game window
     @Override
     public void start(Stage stage) throws Exception {
-        // TODO Auto-generated method stub
 
         //sets the background
         TilePane tilePane = new TilePane();
@@ -57,7 +59,7 @@ public class App extends Application{
 
         //shows the packground
         stage.setTitle("Sudoku");
-        stage.setScene( scene );
+        stage.setScene( scene ); //try to figure out a way to work around this
         stage.show();
     }
 
