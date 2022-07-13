@@ -26,10 +26,9 @@ public class App extends Application{
 
     
     public Parent createApplication() {
-        Rectangle box = new Rectangle(100, 50, Color.BLUE);
 
 
-        return new Pane(box);
+        return new Pane(testButton);
     }
     
     //shows the game window and does stuff with the game window
