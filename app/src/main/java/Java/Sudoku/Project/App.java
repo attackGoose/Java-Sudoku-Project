@@ -3,10 +3,13 @@
  */
 package Java.Sudoku.Project;
 
+import javax.print.attribute.TextSyntax;
+
 import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.*;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.TilePane;
 import javafx.scene.paint.Color;
@@ -23,7 +26,11 @@ public class App extends Application{
     Rectangle box_ll;
     Button testButton;
     Node node;
+    TextField b11; //creates a text field to enter values in my reaction when i found it afte a week "YES FINALLY I CAN CONTINUE THIS PROJECT"
+    TextField b21;
 
+//https://edencoding.com/javafx-textfield/#:~:text=Validating%20user%20input%201%20TextFormatter%20class.%20If%20you,called%20a%20UnaryOperator.%203%20Testing%20for%20numbers.%20
+//dats the tutorial, look over it later or tmr cus im lazy
     
     public Parent createApplication() {
 
