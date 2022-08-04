@@ -11,6 +11,7 @@ import javafx.scene.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.StackPane;
 import javafx.scene.layout.TilePane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
@@ -28,6 +29,7 @@ public class App extends Application{
     Node node;
     TextField b11; //creates a text field to enter values in my reaction when i found it afte a week "YES FINALLY I CAN CONTINUE THIS PROJECT"
     TextField b21;
+    StackPane testPane;
 
 //https://edencoding.com/javafx-textfield/#:~:text=Validating%20user%20input%201%20TextFormatter%20class.%20If%20you,called%20a%20UnaryOperator.%203%20Testing%20for%20numbers.%20
 //dats the tutorial, look over it later or tmr cus im lazy
@@ -60,11 +62,14 @@ public class App extends Application{
                 new Rectangle( 300, 300, Color.GREY )
         );
 
-        Scene scene = new Scene(tilePane);
-        scene.setFill(Color.LIGHTGRAY);
+        testPane.getChildren().add(b11);
+        StackPane testpane = new StackPane();
+        //testpane.setFill(Color.LIGHTGRAY);
 
         //shows the packground
+        testpane.getChildren().add(b11);
         stage.setTitle("Sudoku");
+        Scene scene = new Scene(testpane);
         stage.setScene( scene ); //try to figure out a way to work around this
         stage.show();
     }
