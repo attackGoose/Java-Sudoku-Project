@@ -5,23 +5,19 @@
  //this is more like a sudoku game generator that can also function as a sudoku game solver
 package Java.Sudoku.Project;
 
-import javax.print.attribute.TextSyntax;
-
 import javafx.application.Application;
-import javafx.geometry.Pos;
 import javafx.scene.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
-import javafx.scene.layout.TilePane;
-import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 
 public class App extends Application{
 
     //initializations
+    TextField entry1; 
     Rectangle box_ur;
     Rectangle box_ul;
     Rectangle box_mm;
