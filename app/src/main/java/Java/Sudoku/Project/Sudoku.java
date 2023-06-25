@@ -8,7 +8,7 @@ public class Sudoku{
 
     boolean collapsed = false; //this assumes that no cells have a number in them yet
 
-    public Sudoku(int[][] gameBoard) {
+    public Sudoku(int[][] gameBoard) { //not sure what to put in here yet
 
     }
 
